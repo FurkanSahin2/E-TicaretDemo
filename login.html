@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Login Panel</title>
+      <link
+         rel="stylesheet"
+         href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+         />
+      <link rel="stylesheet" href="css/style.css" />
+      <style>
+         body {
+         background-image: url('img/e-ticaret.png');
+         opacity: 0.9;
+         }
+      </style>
+      <div class="body"></div>
+   </head>
+   <body>
+      <script>
+         function yonlendir() {
+             var kullaniciAdi = document.getElementById("kullaniciAdi").value;
+             var sifre = document.getElementById("sifre").value;
+         
+         
+             if (kullaniciAdi === "e-ticaretdemo" && sifre === "demo123") {
+         
+                 window.location.href = 'index.html';
+         
+             } else {
+                 alert("Kullanıcı adı yahut şifre eksik veya hatalı!");
+             }
+         }
+      </script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+      <form id="loginForm" runat="server">
+         <div class="container" style="width: 30%; height:auto; background-color: rgb(181, 183, 194); margin-top: 70px; border-radius: 10px">
+            <div class="form-group">
+               <br />
+               <h2 class="text-center" style="color: red;">Kullanıcı Girişi</h2>
+            </div>
+            <div class="form-group">
+               <br />
+               <label for="kullaniciAdi"> <b style="color: red">Kullanıcı Adı: </b> </label>
+               <input type="text" id="kullaniciAdi" class="form-control" placeholder="Kullanıcı adı giriniz" required>
+            </div>
+            <div class="form-group">
+               <br />
+               <label for="sifre"> <b style="color: red;">Şifre: </b>  </label>
+               <input type="password" id="sifre" class="form-control" placeholder="Şifre giriniz" required>
+            </div>
+            <div class="form-group;">
+               <br />
+               <!-- <asp:Button ID="btnGiris" CssClass="btn btn-primary form-control" runat="server" Text="Giriş Yap" />
+                  <button style="display: block; margin: 0 auto;" class="btn btn-danger" onclick="window.location.href = 'http://apitestdemo.somee.com/table/';">Giriş Yap</button> -->
+               <input style="display: block; margin: 0 auto;" class="btn btn-danger" type="button" value="Giriş Yap" onclick="yonlendir()">
+            </div>
+         </div>
+      </form>
+      <script></script>
+   </body>
+   <footer class="bg-white text-white">
+      <div class="footer-container p-4" >
+      <section class="mb-4" style="float:right;">
+         <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com" role="button"
+            ><i><img src="img/facebook.png"></i
+            ></a>
+         <a class="btn btn-outline-light btn-floating m-1" href="https://www.x.com" role="button"
+            ><i><img src="img/x.png"></i
+            ></a>
+         <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com" role="button"
+            ><i><img src="img/instagram.png"></i
+            ></a>
+         <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/furkan-sahin02/" role="button"
+            ><i><img src="img/linkledin.png"></i
+            ></a>
+         <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/FurkanSahin2" role="button"
+            ><i><img src="img/github.png"></i
+            ></a>
+      </section>
+      <br>
+      <br>
+      <br>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.818);">
+         © 2023 - Created by Furkan
+      </div>
+      <style>.btn:hover {
+         background-color: #0003b590; 
+         border: 2px solid #000000;
+         }
+      </style>
+   </footer>
+</html>
