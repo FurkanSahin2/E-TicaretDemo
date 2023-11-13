@@ -1,94 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Login Panel</title>
-      <link
-         rel="stylesheet"
-         href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-         />
-      <link rel="stylesheet" href="css/style.css" />
-      <style>
-         body {
-         background-image: url('img/e-ticaret.png');
-         opacity: 0.9;
-         background-size:100%; 
-         }
-      </style>
-      <div class="body"></div>
-   </head>
-   <body>
-      <script>
-         function yonlendir() {
-             var kullaniciAdi = document.getElementById("kullaniciAdi").value;
-             var sifre = document.getElementById("sifre").value;
-         
-         
-             if (kullaniciAdi === "e-ticaretdemo" && sifre === "demo123") {
-         
-                 window.location.href = 'index.html';
-         
-             } else {
-                 alert("Girilen bilgiler eksik veya hatalı!");
-             }
-         }
-      </script>
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
-      <form id="loginForm" runat="server">
-         <div class="container" style="width: 30%; height:auto; background-color: rgba(0, 0, 0, 0.818); margin-top: 70px; border-radius: 10px">
-            <div class="form-group">
-               <br />
-               <h2 class="text-center" style="color: red;">Kullanıcı Girişi</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/style-login.css" />
+    <title>Login Panel</title>
+  </head>
+  <body>
+    <section class="gradient-custom">
+      <div class="form-container"></div>
+
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card bg-dark text-white" style="border-radius: 1rem">
+              <div class="card-body p-5 text-center">
+                <div class="mb-md-5 mt-md-4 pb-5">
+                  <h1><b>KULLANICI GİRİŞİ</b></h1>
+                  <p class="text-white-50 mb-5">
+                    Lütfen kullanıcı adı ve parolayı doğru giriniz!
+                  </p>
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="kullaniciAdi"> <b>Kullanıcı Adı:</b></label>
+                    <input
+                      type="text"
+                      id="kullaniciAdi"
+                      name="kullaniciAdi"
+                      class="form-control form-control-lg"
+                      placeholder="Kullanıcı adı giriniz"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="sifre"> <b>Şifre:</b></label>
+                    <input
+                      type="password"
+                      id="sifre"
+                      name="sifre"
+                      class="form-control form-control-lg"
+                      placeholder="Şifre giriniz"
+                      required
+                    />
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <!-- Checkbox -->
+                    <div class="form-check mb-0">
+                      <input
+                        class="form-check-input me-2"
+                        type="checkbox"
+                        value=""
+                        id="form2Example3"
+                      />
+                      <label class="form-check-label" for="form2Example3">
+                        <p class="pb-lg-5" style="color: white">Beni hatırla</p>
+                      </label>
+                    </div>
+                    <a
+                      href="404-error.html"
+                      class="text-white-50"
+                      style="text-decoration: none"
+                      target="_blank"
+                      ><p class="pb-lg-5">Parolanızı mı unuttunuz?</p></a
+                    >
+                  </div>
+
+                  <button
+                    class="btn btn-outline-light btn-lg px-5"
+                    onclick="yonlendir()"
+                    type="submit"
+                  >
+                    Giriş Yap
+                  </button>
+
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+
+                  <section>
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="https://www.facebook.com"
+                      role="button"
+                      ><i><img src="img/facebook.png" /></i
+                    ></a>
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="https://www.x.com"
+                      role="button"
+                      ><i><img src="img/3256013.png" /></i
+                    ></a>
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="https://www.instagram.com"
+                      role="button"
+                      ><i><img src="img/instagram.png" /></i
+                    ></a>
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="https://www.linkedin.com/in/furkan-sahin02/"
+                      role="button"
+                      ><i><img src="img/linkledin.png" /></i
+                    ></a>
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="https://github.com/FurkanSahin2"
+                      role="button"
+                      ><i><img src="img/270798.png" /></i
+                    ></a>
+                  </section>
+                </div>
+
+                <div>
+                  <p>Hesabınız yok mu?</p>
+                  <p>
+                    <a
+                      href="404-error.html"
+                      class="text-white fw-bold"
+                      target="_blank"
+                      style="text-decoration: none"
+                      >Üye Ol</a
+                    >
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-               <br />
-               <label for="kullaniciAdi"> <b style="color: red">Kullanıcı Adı: </b> </label>
-               <input type="text" id="kullaniciAdi" class="form-control" placeholder="Kullanıcı adı giriniz" required>
-            </div>
-            <div class="form-group">
-               <br />
-               <label for="sifre"> <b style="color: red;">Şifre: </b>  </label>
-               <input type="password" id="sifre" class="form-control" placeholder="Şifre giriniz" required>
-            </div>
-            <div class="form-group;">
-               <br />
-               <input style="display: block; margin: 0 auto;" class="btn btn-danger" type="button" value="Giriş Yap" onclick="yonlendir()">
-            </div>
-            <div class="container" style="width: auto; height:auto; text-align: center;">
-                <p><h5 style="color:white">Bizi Sosyal Medya Hesaplarından Takip Edin 👇</h5></p>
-                <section class="mb-4">
-                       <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com" role="button"
-                          ><i><img src="img/facebook.png"></i
-                          ></a>
-                       <a class="btn btn-outline-light btn-floating m-1" href="https://www.x.com" role="button"
-                          ><i><img src="img/3256013.png"></i
-                          ></a>
-                       <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com" role="button"
-                          ><i><img src="img/instagram.png"></i
-                          ></a>
-                       <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/furkan-sahin02/" role="button"
-                          ><i><img src="img/linkledin.png"></i
-                          ></a>
-                       <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/FurkanSahin2" role="button"
-                          ><i><img src="img/270798.png"></i
-                          ></a>
-                    </section>
-            </div>
-         </div>
-      </form>
-      
-   </body>
-   <footer class="bg-white text-center text-white">
-    <div class="footer-container p-4">
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.818);">
-       © 2023 - Created by Furkan
-    </div>
-    <style>.btn:hover {
-       background-color: #0003b590; 
-       border: 2px solid #000000;
-       }
-    </style>
- </footer>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+  <script>
+    const options = {
+      bottom: "32px", // default: '32px'
+      right: "32px", // default: '32px'
+      left: "unset", // default: 'unset'
+      time: "0.4s", // default: '0.3s'
+      mixColor: "#fff", // default: '#fff'
+      backgroundColor: "#fff", // default: '#fff'
+      buttonColorDark: "#100f2c", // default: '#100f2c'
+      buttonColorLight: "#fff", // default: '#fff'
+      saveInCookies: true, // default: true,
+      label: "🌓", // default: ''
+      autoMatchOsTheme: true, // default: true
+    };
+
+    const darkmode = new Darkmode(options);
+    darkmode.showWidget();
+  </script>
+  <script>
+    function yonlendir() {
+      var kullaniciAdi = document.getElementById("kullaniciAdi").value;
+      var sifre = document.getElementById("sifre").value;
+
+      if (kullaniciAdi === "e-ticaretdemo" && sifre === "demo123") {
+        window.location.href = "index.html";
+      } else {
+        var errorDiv = document.createElement("div");
+        errorDiv.className = "error-message";
+        errorDiv.textContent = "Girilen bilgiler eksik veya hatalı!";
+        errorDiv.style.color = "red";
+        errorDiv.style.fontWeight = "bold";
+        errorDiv.style.fontSize = "20px";
+        errorDiv.style.width = "28%";
+        errorDiv.style.marginLeft = "auto";
+        errorDiv.style.marginRight = "auto";
+        errorDiv.style.textAlign = "center";
+        errorDiv.style.border = "1px solid red";
+        errorDiv.style.padding = "10px";
+        var formContainer = document.querySelector(".form-container");
+        formContainer.appendChild(errorDiv);
+      }
+
+      setTimeout(function () {
+        errorDiv.style.display = "none";
+      }, 2500);
+    }
+  </script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script src="http://codepen.io/assets/libs/fullpage/jquery.js"></script>
 </html>

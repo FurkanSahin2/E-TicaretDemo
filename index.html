@@ -1,257 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="/css/style.css" />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
-         rel="stylesheet"
-         />
-      <link
-         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-         rel="stylesheet"
-         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-         crossorigin="anonymous"
-         />
-      <link
-         rel="stylesheet"
-         href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-         />
-      <title>E-Ticaret Demo</title>
-   </head>
-   <body style="background-color:azure">
-      <nav
-         class="navbar navbar-expand-lg bg-grey"
-         style="background-color:rgba(0, 0, 0, 0.292)"
-         >
-         <div class="container-fluid">
-            <a class="navbar-brand" href="login.html">
-            <img src="../E-TicaretDemo/img/ecommerce (1).png" alt="Navbar Icon" />
-            E-Ticaret Demo
-            </a>
-            <button
-               class="navbar-toggler"
-               type="button"
-               data-bs-toggle="collapse"
-               data-bs-target="#navbarSupportedContent"
-               aria-controls="navbarSupportedContent"
-               aria-expanded="false"
-               aria-label="Toggle navigation"
-               >
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                     <a class="nav-link active" aria-current="page" href="index.html"
-                        >Anasayfa</a
-                        >
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="hakkimizda.html">Hakkımızda</a>
-                  </li>
-               </ul>
-               <form class="d-flex" role="search">
-                  <input
-                     class="form-control me-2"
-                     type="search"
-                     placeholder="Arayınız"
-                     aria-label="Search"
-                     />
-                  <button
-                     class="btn btn-outline-success; btn btn-danger"
-                     type="submit" 
-                     >
-                  Ara
-                  </button>
-               </form>
-            </div>
-         </div>
-      </nav>
-      </head>
-      <table style="width: 100%;">
-         <tr>
-            <td style="width: 25%;">
-               <div class="urun-karti">
-                  <img class="urun-resim" src="img/81FBYF+-MVL._AC_UF350,350_QL80_.jpg" alt=" ~ Ürün Resmi Bulunmuyor ~">
-                  <br>
-                  <br>
-                  <h2>Hp Laptop
-                  </h2>
-                  <p style="color: red"><b>Fiyat: 10.299 TL</b></p>
-                  <p><b><u>Açıklama:</u></b> HP Laptop 15 Dizüstü Bilgisayar, 15,6 inç FHD, AMD Ryzen 5 7520U, 8 GB Ram, 256 GB SSD, FreeDos, Siyah, 7P6K2EA</p>
-                  <button style="border-radius: 10px;">Sepete Ekle</button>
-               </div>
-            </td>
-            <td style="width: 25%;">
-               <div class="urun-karti">
-                  <img class="urun-resim" src="img/41E+91hh2kL._AC_SX522_.jpg" alt=" ~ Ürün Resmi Bulunmuyor ~">
-                  <br>
-                  <br>
-                  <h2>Huawei Matebook </h2>
-                  <p style="color: red"><b>Fiyat: 19.999 TL</b></p>
-                  <p><b><u>Açıklama:</u></b> Huawei Matebook D15, 15.6" FHD, AMD R7 5700U, 16GB RAM, 512GB SSD, Integrated AMD Radeon Graphics, Windows 11</p>
-                  <br>
-                  <br>
-                  <button style="border-radius: 10px;">Sepete Ekle</button>
-               </div>
-            </td>
-            <td style="width: 25%;">
-               <div class="urun-karti">
-                  <img class="urun-resim" src="img/61fd2oCrvyL._AC_SX522_.jpg" alt=" ~ Ürün Resmi Bulunmuyor ~ ">
-                  <br>
-                  <br>
-                  <h2>Apple M2 Pro</h2>
-                  <p style="color: red"><b>Fiyat: 77.340 TL</b></p>
-                  <p><b><u>Açıklama:</u></b> Apple M2 Pro çipe sahip 2023 MacBook Pro laptop: 16.2 inç Liquid Retina XDR ekran, 16 GB RAM, 512 GB SSD depolama ; Uzay Grisi</p>
-                  <br>
-                  <button style="border-radius: 10px;">Sepete Ekle</button>
-               </div>
-            </td>
-            <td style="width: 25%;">
-               <div class="urun-karti">
-                  <img class="urun-resim" src="img/61G73a9ORJL._AC_SX522_.jpg" alt=" ~ Ürün Resmi Bulunmuyor ~ ">
-                  <br>
-                  <br>
-                  <h2>Monster Notebook</h2>
-                  <p style="color: red"><b>Fiyat: 26.490 TL</b></p>
-                  <p><b><u>Açıklama:</u></b> Monster Abra A5 V17.3.5 Intel Core i7 11800H 16GB RAM 500GB SSD RTX 3050 TI FreeDOS 15.6" FHD 144 Hz Oyun Bilgisayarı</p>
-                  <br>
-                  <button style="border-radius: 10px;">Sepete Ekle</button>
-               </div>
-            </td>
-         </tr>
-      </table>
-      <table style="width: 100%;">
-         <tr>
-            <td style="width: 25%;">
-               <div class="urun-karti2">
-                  <img class="urun-resim" src="img/71eZzODGyUL.__AC_SY300_SX300_QL70_ML2_.jpg" alt=" ~ Ürün Resmi Bulunmuyor ~ ">
-                  <br>
-                  <br>
-                  <h2>Acer Notebook</h2>
-                  <p style="color: red"><b>Fiyat: 25.999 TL</b></p>
-                  <p><b><u>Açıklama:</u></b> Acer Nitro 5 AN515-58-51U3, Intel i5-12500H İşlemci, 8GB RAM 512GB SSD, 15.6 inç 144hz Ekran, NVIDIA GeForce RTX 3050 4GB Harici Ekran Kartı, Freedos İşletim Sistemi</p>
-                  <button style="border-radius: 10px;">Sepete Ekle</button>
-               </div>
-            </td>
-            <td style="width: 25%;">
-               <div class="urun-karti2">
-                  <img class="urun-resim" src="img/71wPTudc8iL._AC_SX522_.jpg" alt=" ~ Ürün Resmi Bulunmuyor ~">
-                  <br>
-                  <br>
-                  <h2>MSI Dizüstü Bilgisayar</h2>
-                  <p style="color: red"><b>Fiyat: 169.730 TL</b></p>
-                  <p><b><u>Açıklama:</u></b> MSI NB TITAN GT77HX 13VI-069TR Dizüstü Bilgisayar, Core I9-13980HX, 17.3 UHD 144Hz, 128GB RAM, RTX4090 16GB, 4TB SSD, Windows 11</p>
-                  <button style="border-radius: 10px;">Sepete Ekle</button>
-               </div>
-            </td>
-            <td style="width: 25%;">
-               <div class="urun-karti2">
-                  <img class="urun-resim" src="img/61XNKxzxAiL.__AC_SX300_SY300_QL70_ML2_.jpg" alt=" ~ Ürün Resmi Bulunmuyor ~">
-                  <br>
-                  <br>
-                  <h2>Casper Notebook</h2>
-                  <p style="color: red"><b>Fiyat: 14.999 TL</b></p>
-                  <p><b><u>Açıklama:</u></b> Casper Nirvana C500.1135-BF00X-G-F Intel Core i5-1135G7 16GB RAM 1TB SSD Freedos</p>
-                  <br>
-                  <br>
-                  <button style="border-radius: 10px;">Sepete Ekle</button>
-               </div>
-            </td>
-            <td style="width: 25%;">
-               <div class="urun-karti2">
-                  <img class="urun-resim" src="img/91I7Qy-b3hL.__AC_SX300_SY300_QL70_ML2_.jpg" alt=" ~ Ürün Resmi Bulunmuyor ~">
-                  <br>
-                  <br>
-                  <h2>Dell Notebook</h2>
-                  <p style="color: red"><b>Fiyat: 19.999 TL</b></p>
-                  <p><b><u>Açıklama:</u></b> Dell Inspiron 15.6" FHD Notebook 3520/Core i5-1235U/16GB/512GB SSD/Intel Iris Xe/WLAN + BT/Kb/3 Cell/Ubuntu, Dizüstü Bilgisayar, Laptop</p>
-                  <br>
-                  <br>
-                  <button style="border-radius: 10px;">Sepete Ekle</button>
-               </div>
-            </td>
-         </tr>
-      </table>
-      <style>
-         .urun-karti {
-         border: 1px solid #ccc;
-         border-color: #000000;
-         padding: 5%;
-         margin: 3%;
-         width: 96%;
-         height: 650px;
-         text-align: center;
-         border-radius: 15px;
-         }
-         .urun-karti2 {
-         border: 1px solid #ccc;
-         border-color: #000000;
-         padding: 5%;
-         margin: 3%;
-         width: 96%;
-         height: 750px;
-         text-align: center;
-         border-radius: 15px;
-         }
-         .urun-resim {
-         max-width: 100%;
-         height: auto;
-         }
-         .p-color{
-         color: red;
-         }
-         .p-font-size {
-         font-size: 1.5em;
-         }
-      </style>
-      
-      <script
-         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-         crossorigin="anonymous"
-         ></script>
-      <script
-         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-         crossorigin="anonymous"
-         ></script>
-      <script
-         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-         crossorigin="anonymous"
-         ></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-   </body>
-   <footer class="text-center text-white">
-      <div class="footer-container p-4">
-      <section class="mb-2">
-         <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com" role="button"
-            ><i><img src="img/facebook.png"></i
-            ></a>
-         <a class="btn btn-outline-light btn-floating m-1" href="https://www.x.com" role="button"
-            ><i><img src="img/3256013.png"></i
-            ></a>
-         <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com" role="button"
-            ><i><img src="img/instagram.png"></i
-            ></a>
-         <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/furkan-sahin02/" role="button"
-            ><i><img src="img/linkledin.png"></i
-            ></a>
-         <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/FurkanSahin2" role="button"
-            ><i><img src="img/270798.png"></i
-            ></a>
-      </section>
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.818);">
-         © 2023 - Created by Furkan
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <!--! Navbar Start  -->
+    <div class="navbar">
+      <div class="navbar-wrapper">
+        <div class="logo-wrapper">
+          <h1 class="logo">E-Ticaret Demo</h1>
+        </div>
+        <div class="menu-container">
+          <ul class="menu-list">
+            <li class="menu-list-item">
+              <a href="index.html" style="color: white; text-decoration: none"
+                ><b>Ana Sayfa</b></a
+              >
+            </li>
+            <li class="menu-list-item">
+              <a
+                href="404-found-error.html"
+                target="_blank"
+                style="color: white; text-decoration: none"
+                >Kampanyalar</a
+              >
+            </li>
+            <li class="menu-list-item">
+              <a
+                href="404-found-error.html"
+                target="_blank"
+                style="color: white; text-decoration: none"
+                >Çok Satanlar</a
+              >
+            </li>
+            <li class="menu-list-item">
+              <a
+                href="404-found-error.html"
+                target="_blank"
+                style="color: white; text-decoration: none"
+                >Sepetiniz</a
+              >
+            </li>
+            <li class="menu-list-item">
+              <a
+                href="contact-us.html"
+                target="_blank"
+                style="color: white; text-decoration: none"
+                >İletişim</a
+              >
+            </li>
+            <li class="menu-list-item">
+              <a
+                href="hakkimizda.html"
+                target="_blank"
+                style="color: white; text-decoration: none"
+                >Hakkımızda</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="profile-container">
+          <img class="profile-picture" src="img/68972718.jpg" alt="" "/>
+          <div class="profile-text-container">
+            <span class="profile-text">Hesabım</span>
+            <i class="bi bi-caret-down-fill"></i>
+          </div>
+          <div class="toggle">
+            <i class="bi bi-moon-fill toggle-icon"></i>
+            <i class="bi bi-brightness-high-fill toggle-icon"></i>
+            <div class="toggle-ball"></div>
+          </div>
+        </div>
       </div>
-      <style>.btn:hover {
-         background-color: #0003b590; 
-         border: 2px solid #000000;
-         }
-      </style>
-   </footer>
+    </div>
+    <!--! Navbar End  -->
+
+    <!--! Sidebar Start  -->
+    <div class="sidebar">
+      <i class="bi bi-search"></i>
+      <i class="bi bi-house-door-fill"></i>
+      <i class="bi bi-person-circle"></i>
+      <i class="bi bi-bookmark-star-fill"></i>
+      <i class="bi bi-hourglass-top"></i>
+      <i class="bi bi-basket-fill"></i>
+      <i class="bi bi-gear-fill"></i>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="#" id="projects">
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            style="width: 190px; position: sticky; top: 0"
+            type="search"
+            placeholder="Arayınız"
+            aria-label="Search"
+          />
+          <button
+            class="btn btn-danger"
+            type="submit"
+            style="display: block; margin: 0 auto"
+          >
+            Ara
+          </button>
+        </form></a
+      >
+    </div>
+    <!--! Sidebar End  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+      const options = {
+        bottom: "32px", // default: '32px'
+        right: "32px", // default: '32px'
+        left: "unset", // default: 'unset'
+        time: "0.4s", // default: '0.3s'
+        mixColor: "#fff", // default: '#fff'
+        backgroundColor: "#fff", // default: '#fff'
+        buttonColorDark: "#100f2c", // default: '#100f2c'
+        buttonColorLight: "#fff", // default: '#fff'
+        saveInCookies: true, // default: true,
+        label: "🌓", // default: ''
+        autoMatchOsTheme: true, // default: true
+      };
+
+      const darkmode = new Darkmode(options);
+      darkmode.showWidget();
+    </script>
+  </body>
 </html>
