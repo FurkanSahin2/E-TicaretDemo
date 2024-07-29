@@ -21,3 +21,11 @@ previewBox.forEach(close => {
     previewContainer.style.display = 'none';
   });
 });
+
+// ESC tuşuna basıldığında önizleme kutusunu kapat
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        // Önizleme kutusunu gizle
+        previewContainer.style.display = 'none';
+    }
+});
