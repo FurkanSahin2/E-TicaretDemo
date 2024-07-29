@@ -64,7 +64,7 @@
                       </label>
                     </div>
                     <a
-                      href="404-error.html"
+                      href="./404-found-error-for-login.html"
                       class="text-white-50"
                       style="text-decoration: none"
                       target="_blank"
@@ -96,7 +96,7 @@
                       class="btn btn-outline-light btn-floating m-1"
                       href="https://www.x.com"
                       role="button"
-                      ><i><img src="img/3256013.png" /></i
+                      ><i><img src="img/X-Logo.jpg" /></i
                     ></a>
                     <a
                       class="btn btn-outline-light btn-floating m-1"
@@ -106,13 +106,13 @@
                     ></a>
                     <a
                       class="btn btn-outline-light btn-floating m-1"
-                      href="https://www.linkedin.com/in/furkan-sahin02/"
+                      href="https://www.linkedin.com"
                       role="button"
                       ><i><img src="img/linkledin.png" /></i
                     ></a>
                     <a
                       class="btn btn-outline-light btn-floating m-1"
-                      href="https://github.com/FurkanSahin2"
+                      href="https://github.com"
                       role="button"
                       ><i><img src="img/270798.png" /></i
                     ></a>
@@ -123,7 +123,7 @@
                   <p>Hesabınız yok mu?</p>
                   <p>
                     <a
-                      href="404-error.html"
+                      href="./404-found-error-for-login.html"
                       class="text-white fw-bold"
                       target="_blank"
                       style="text-decoration: none"
@@ -139,53 +139,7 @@
     </section>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-  <script>
-    const options = {
-      bottom: "32px", // default: '32px'
-      right: "32px", // default: '32px'
-      left: "unset", // default: 'unset'
-      time: "0.4s", // default: '0.3s'
-      mixColor: "#fff", // default: '#fff'
-      backgroundColor: "#fff", // default: '#fff'
-      buttonColorDark: "#100f2c", // default: '#100f2c'
-      buttonColorLight: "#fff", // default: '#fff'
-      saveInCookies: true, // default: true,
-      label: "🌓", // default: ''
-      autoMatchOsTheme: true, // default: true
-    };
-
-    const darkmode = new Darkmode(options);
-    darkmode.showWidget();
-  </script>
-  <script>
-    function yonlendir() {
-      var kullaniciAdi = document.getElementById("kullaniciAdi").value;
-      var sifre = document.getElementById("sifre").value;
-
-      if (kullaniciAdi === "e-ticaretdemo" && sifre === "demo123") {
-        window.location.href = "indexx.html";
-      } else {
-        var errorDiv = document.createElement("div");
-        errorDiv.className = "error-message";
-        errorDiv.textContent = "Girilen bilgiler eksik veya hatalı!";
-        errorDiv.style.color = "red";
-        errorDiv.style.fontWeight = "bold";
-        errorDiv.style.fontSize = "20px";
-        errorDiv.style.width = "28%";
-        errorDiv.style.marginLeft = "auto";
-        errorDiv.style.marginRight = "auto";
-        errorDiv.style.textAlign = "center";
-        errorDiv.style.border = "1px solid red";
-        errorDiv.style.padding = "10px";
-        var formContainer = document.querySelector(".form-container");
-        formContainer.appendChild(errorDiv);
-      }
-
-      setTimeout(function () {
-        errorDiv.style.display = "none";
-      }, 2500);
-    }
-  </script>
+  <script src="js/script-login.js"></script>
   <script
     src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
