@@ -10,7 +10,6 @@ body {
   height: 200vh;
   font-family: "Electrolize", sans-serif;
 }
-
 /*! Base Css End  */
 
 /*! Navbar Css Start  */
@@ -69,7 +68,7 @@ body {
   font-weight: bold;
 
 }
-
+/*  
 .toggle {
   width: 40px;
   height: 20px;
@@ -95,6 +94,7 @@ body {
   color: goldenrod;
   margin-top: 2px;
 }
+*/
 
 /*! Navbar Css End  */
 
