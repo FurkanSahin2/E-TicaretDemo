@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background: rgb(227, 227, 227);
+}
+
+/*! Navbar Start */
+
+.margin {
+  margin-top: 25px;
+}
+
+.customLink > a {
+  text-decoration: none;
+  color: #232323;
+  line-height: 37px;
+  font-size: large;
+}
+
+.customLink > a:hover {
+  color: #fff;
+  background: gray;
+}
+
+#circleIcon {
+  width: 65px;
+  height: 65px;
+  line-height: 60px;
+  border: 2px dotted #232323;
+  border-radius: 100%;
+  text-align: center;
+}
+
+/*! Navbar End */
+
+.section {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 100px;
+  text-align: justify;
+}
+
+.p-content b {
+  color: #b41010;
+}
+
+.content-section {
+  float: left;
+  width: 55%;
+}
+
+.content-section .title {
+  text-transform: uppercase;
+  font-size: 28px;
+}
+
+.content-section .content h3 {
+  line-height: 1.5;
+  margin-top: 20px;
+  color: #b41010;
+  font-size: 23px;
+}
+
+.content-section .content p {
+  margin-top: 10px;
+  font-size: 19px;
+  font-family: "Arsenal", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.9;
+}
+
+.content-section .content .button {
+  margin-top: 30px;
+}
+
+.content-section .content .button a {
+  background-color: rgb(78, 77, 77);
+  padding: 12px 40px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+}
+
+.content-section .content .button a:hover {
+  background-color: #c8c6c6;
+  color: #000;
+}
+
+.content-section .social {
+  margin: 50px 195px;
+}
+
+.content-section .social i {
+  margin-top: 40px;
+  color: #b41010;
+  letter-spacing: 30px;
+}
+
+.content-section .social i:hover {
+  color: #000;
+  transform: scale(1.4);
+}
+
+.image-section {
+  float: right;
+  width: 38%;
+}
+
+.image-section img {
+  width: 115%;
+  height: auto;
+  border-radius: 15%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding-top: 50px;
+  }
+
+  .content-section, .image-section {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .content-section .social {
+    margin: 20px 0;
+  }
+
+  .content-section .content .button a {
+    font-size: 20px;
+    padding: 10px 30px;
+  }
+
+  .image-section img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .customLink > a {
+    font-size: medium;
+    line-height: 30px;
+  }
+
+  .content-section .title {
+    font-size: 24px;
+  }
+
+  .content-section .content h3 {
+    font-size: 20px;
+  }
+
+  .content-section .content p {
+    font-size: 16px;
+  }
+
+  .content-section .content .button a {
+    font-size: 18px;
+    padding: 8px 20px;
+  }
+}
