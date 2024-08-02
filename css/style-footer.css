@@ -38,7 +38,7 @@
   content: "";
   position: absolute;
   left: 32;
-  bottom: -465px;
+  bottom: -470px;
   background-color: #e91e63;
   height: 2px;
   box-sizing: border-box;
@@ -63,7 +63,7 @@
 .footer-col .h4::before {
   content: "";
   left: 32;
-  bottom: -1380px;
+  bottom: -1390px;
   background-color: #e91e63;
   height: 2px;
   box-sizing: border-box;
