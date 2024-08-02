@@ -3,7 +3,7 @@ function yonlendir() {
     var sifre = document.getElementById("sifre").value;
 
     if (kullaniciAdi === "e-ticaretdemo" && sifre === "demo123") {
-      window.location.href = "indexx.html";
+      window.location.href = "home-page.html";
     } else {
       var errorDiv = document.createElement("div");
       errorDiv.className = "error-message";
@@ -25,6 +25,12 @@ function yonlendir() {
       errorDiv.style.display = "none";
     }, 2500);
   }
+
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        yonlendir();
+    }
+});
 
 
   const options = {

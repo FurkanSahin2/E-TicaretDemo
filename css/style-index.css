@@ -32,7 +32,9 @@
 /*! Base Css Start  */
 
 * {
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -61,6 +63,8 @@ body {
 /*! Base Css End  */
 
 /*! Body Css Start  */
+
+/*! Content Start  */
 
 .container {
   max-width: 1820px;
@@ -253,8 +257,6 @@ body {
   }
 }
 
-
-
-
+/*! Content End  */
 
 /*! Body Css End  */

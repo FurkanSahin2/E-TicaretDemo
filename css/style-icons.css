@@ -1,94 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: black;
-  font-family: "Electrolize", sans-serif;
-}
-p {
+
+.social-media p {
   margin-top: 30px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-ul {
+.social-media ul {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-ul li {
+.social-media ul li {
   position: relative;
   list-style: none;
-  margin: 0 30px;
+  margin: 50px 30px;
   cursor: pointer;
   text-align: center;
   flex: 1 0;
 }
-ul li a {
+.social-media ul li a {
   text-decoration: none;
 }
-ul li a .bi {
-  font-size: 4em;
-  color: #222;
+.social-media ul li a .bi {
+  font-size: 2em;
+  color: #797676;
 }
-ul li::before {
+.social-media ul li::before {
   font-family: "Bootstrap-icons";
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
-  font-size: 4em;
+  margin-right: 5px;
+  transform: translateX(-49%);
+  font-size: 2em;
   height: 0;
   overflow: hidden;
-  transition: 1s ease-in-out;
+  transition: 2s ease-in-out;
 }
-ul li:nth-child(1)::before {
-  content: "\f5ef";
+.social-media ul li:nth-child(1)::before {
+  content: "\F8DB";
   color: #1da1f2;
   border-bottom: 3px solid #1da1f2;
 }
-ul li:nth-child(2)::before {
+.social-media ul li:nth-child(2)::before {
   content: "\F437";
   margin-left: 2px;
   color: rgb(250,126,30);
   border-bottom: 4px solid rgb(250,126,30);
 }
 
-ul li:nth-child(3)::before {
+.social-media ul li:nth-child(3)::before {
   content: "\F62B";
   color: #ff0000;
   border-bottom: 4px solid #ff0000;
 }
-ul li:nth-child(4)::before {
+.social-media ul li:nth-child(4)::before {
   content: "\F618";
   margin-left: 4px;
   color: #25d366;
   border-bottom: 4px solid #25d366;
 }
-ul li:nth-child(5)::before {
+.social-media ul li:nth-child(5)::before {
   content: "\F84B";
   color: #cd6cf0;
   border-bottom: 4px solid #cd6cf0;
 }
-ul li:nth-child(6)::before {
-  content: "\F543";
-  margin-left: 4px;
-  color: rgb(220, 240, 228);
-  border-bottom: 4px solid rgb(220, 240, 228);
-}
-ul li:hover::before {
-  height: 70%;
+
+.social-media  ul li:hover::before {
+  height: 50%;
 }
 
 @media screen and (max-width: 768px) {
-  ul li {
+  .social-media ul li {
     flex-basis: 100%; 
     margin: 18px 0; 
   }
