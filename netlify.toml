@@ -2,3 +2,4 @@
   base = "."
   publish = "public"
   command = "yarn build"
+  timeout = 300
