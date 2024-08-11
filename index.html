@@ -177,7 +177,6 @@
           signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
               const user = userCredential.user;
-              alert("Login Successful!");
               window.location.href = "./home-page.html";
             })
             .catch((error) => {
