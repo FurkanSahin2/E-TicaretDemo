@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/style-login.css" />
+    <title>Register Panel</title>
+    <link rel="icon" href="img/shops.png" />
+  </head>
+  <body>
+    <section class="gradient-custom">
+      <div class="form-container"></div>
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card bg-dark text-white" style="border-radius: 1rem">
+              <div class="card-body p-5 text-center">
+                <div class="mb-md-5 mt-md-4 pb-5">
+                  <h1><b>KAYIT OL</b></h1>
+                  <p class="text-white-50 mb-5" style="margin-top: 20px">
+                    Aşağıda yer alan bilgileri doldurarak kayıt olun!
+                  </p>
+
+                  <form id="registerForm" method="post">
+                    <div class="form-outline form-white mb-4">
+                      <label for="userName" style="margin-bottom: 10px"
+                        ><b>Kullanıcı Adı:</b></label
+                      >
+                      <input
+                        type="text"
+                        id="userName"
+                        name="userName"
+                        class="form-control form-control-lg"
+                        placeholder="Kullanıcı adı giriniz"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-outline form-white mb-4">
+                      <label for="email" style="margin-bottom: 10px"
+                        ><b>E-posta:</b></label
+                      >
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-control form-control-lg"
+                        placeholder="E-posta giriniz"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-outline form-white mb-4">
+                      <label for="password" style="margin-bottom: 10px"
+                        ><b>Şifre:</b></label
+                      >
+                      <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        class="form-control form-control-lg"
+                        placeholder="Şifre giriniz"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-outline form-white mb-4">
+                      <label for="passwordRepeat" style="margin-bottom: 10px"
+                        ><b>Şifre (Tekrar):</b></label
+                      >
+                      <input
+                        type="password"
+                        id="passwordRepeat"
+                        name="passwordRepeat"
+                        class="form-control form-control-lg"
+                        placeholder="Şifreyi tekrar giriniz"
+                        required
+                      />
+                    </div>
+
+                    <button
+                      id="registerButton"
+                      class="btn btn-outline-light btn-lg px-5"
+                      type="submit"
+                      style="margin-top: 35px"
+                    >
+                      <a
+                        href="index.html"
+                        style="text-decoration: none; color: inherit"
+                      >
+                        Kayıt Ol
+                      </a>
+                    </button>
+                  </form>
+
+                  <br /><br /><br /><br />
+
+                  <section>
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="https://www.facebook.com"
+                      role="button"
+                      target="_blank"
+                    >
+                      <i><img src="img/facebook.png" /></i>
+                    </a>
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="https://www.x.com"
+                      role="button"
+                      target="_blank"
+                    >
+                      <i><img src="img/X-Logo.jpg" /></i>
+                    </a>
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="https://www.instagram.com"
+                      role="button"
+                      target="_blank"
+                    >
+                      <i><img src="img/instagram.png" /></i>
+                    </a>
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="https://www.linkedin.com"
+                      role="button"
+                      target="_blank"
+                    >
+                      <i><img src="img/linkledin.png" /></i>
+                    </a>
+                    <a
+                      class="btn btn-outline-light btn-floating m-1"
+                      href="https://github.com"
+                      role="button"
+                      target="_blank"
+                    >
+                      <i><img src="img/270798.png" /></i>
+                    </a>
+                  </section>
+                </div>
+
+                <div>
+                  <p>Zaten hesabın var mı?</p>
+                  <p>
+                    <a
+                      href="./index.html"
+                      class="text-white fw-bold"
+                      style="text-decoration: none"
+                      >Giriş Yap</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+      } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+      import {
+        getDatabase,
+        ref,
+        set,
+      } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAb5E2giyTptAgDapw1K3aAYTTnDMFc4tE",
+        authDomain: "e-ticaretdemo-1.firebaseapp.com",
+        projectId: "e-ticaretdemo-1",
+        storageBucket: "e-ticaretdemo-1.appspot.com",
+        messagingSenderId: "59504154854",
+        appId: "1:59504154854:web:480309572a6c4bfa55c327",
+        measurementId: "G-9SK5M4J4VD",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const db = getDatabase(app);
+
+      document
+        .getElementById("registerButton")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          const userName = document.getElementById("userName").value;
+          const passwordRepeat =
+            document.getElementById("passwordRepeat").value;
+
+          if (password !== passwordRepeat) {
+            alert("Şifreler eşleşmiyor");
+            return;
+          }
+
+          // Validate Functions
+          function validate_email(email) {
+            const expression = /^[^@]+@\w+(\.\w+)+\w$/;
+            return expression.test(email);
+          }
+
+          function validate_password(password) {
+            // Firebase only accepts leghts greater than 6
+            return password.length >= 6;
+          }
+
+          // Validate input fields
+          if (!validate_email(email) || !validate_password(password)) {
+            alert("Hatalı e-posta veya şifre tercihi");
+            return;
+            // Don't continue running the code
+          }
+
+          createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+              const user = userCredential.user;
+              set(ref(db, "users/" + user.uid), {
+                userName: userName,
+                email: email,
+              });
+              alert("Register Successful!");
+              window.location.href = "index.html";
+            })
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              alert(`Error: ${errorMessage}`);
+            });
+        });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          document.getElementById("registerButton").click();
+        }
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="http://codepen.io/assets/libs/fullpage/jquery.js"></script>
+    <script src="js/script-register.js"></script>
+  </body>
+</html>
