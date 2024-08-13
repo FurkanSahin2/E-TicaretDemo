@@ -76,6 +76,33 @@
 
 /*! h4 for Home Page End !*/
 
+/*! h4 for Contact Us Start !*/
+
+.footer-col .contact-h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  padding-left: 32px;
+}
+
+.footer-col .contact-h4::before {
+  content: "";
+  position: absolute;
+  left: 32;
+  bottom: -485px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 55px;
+}
+
+.footer-col .contact-h4:hover {
+  transform: scale(1.2);
+}
+
+/*! h4 for Contact Us End !*/
 
 .footer-col .footer-ul .footer-list:not(:last-child) {
   margin-bottom: 10px;
@@ -124,13 +151,17 @@
 }
 
 @media (max-width: 1300px) {
-	.footer-col h4::before{
-		content: none;
-	  }
-	
-	  .footer-col .h4::before{
-		content: none;
-	  }
+  .footer-col h4::before {
+    content: none;
+  }
+
+  .footer-col .h4::before {
+    content: none;
+  }
+
+  .footer-col .contact-h4::before {
+    content: none;
+  }
 }
 
 @media (max-width: 574px) {

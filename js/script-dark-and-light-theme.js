@@ -1,5 +1,21 @@
+const css = `
+  @media (max-width: 700px) {
+    .darkmode-widget {
+      position: fixed !important;
+      bottom: 0px !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+    }
+  }
+`;
+
+const style = document.createElement("style");
+style.appendChild(document.createTextNode(css));
+
+document.head.appendChild(style);
+
 const options = {
-  bottom: "32px", // default: '32px'
+  bottom: "75px", // default: '32px'
   right: "32px", // default: '32px'
   left: "unset", // default: 'unset'
   time: "0.4s", // default: '0.3s'
@@ -14,3 +30,5 @@ const options = {
 
 const darkmode = new Darkmode(options);
 darkmode.showWidget();
+
+document.querySelector(".darkmode-toggle").classList.add("darkmode-widget");
