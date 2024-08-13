@@ -223,13 +223,13 @@
           const password = document.getElementById("password").value;
 
           if (!email && !password) {
-            showError("Email ve şifre boş bırakılamaz");
+            showError("Email ve şifre boş bırakılamaz !");
             return;
           } else if (!email) {
-            showError("Email boş bırakılamaz");
+            showError("Email boş bırakılamaz !");
             return;
           } else if (!password) {
-            showError("Şifre boş bırakılamaz");
+            showError("Şifre boş bırakılamaz !");
             return;
           }
 
@@ -247,9 +247,9 @@
                 errorCode === "auth/wrong-password" ||
                 errorCode === "auth/invalid-login-credentials"
               ) {
-                showError("Şifre eksik veya hatalı");
+                showError("Şifre eksik veya hatalı !");
               } else if (errorCode === "auth/user-not-found") {
-                showError("Kullanıcı bulunamadı");
+                showError("Kullanıcı bulunamadı !");
               } else {
                 showError(`Tekrar Deneyiniz!`);
               }

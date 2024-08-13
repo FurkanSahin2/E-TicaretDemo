@@ -247,9 +247,29 @@
 
           if (passwordRepeat && password) {
             if (password !== passwordRepeat) {
-              showError("İki şifre eşleşmiyor. Tekrar deneyiniz!");
+              showError("İki şifre eşleşmiyor. Tekrar deneyiniz !");
               return;
             }
+          }
+
+          if (!email && !password && !userName && !passwordRepeat) {
+            showError("Talep edilen bilgiler boş bırakılamaz !");
+            return;
+          } else if (email && password && passwordRepeat && !userName) {
+            showError("Kullanıcı adı boş bırakılamaz !");
+            return;
+          } else if (!email && !password) {
+            showError("Email ve şifre boş bırakılamaz !");
+            return;
+          } else if (!email) {
+            showError("Email boş bırakılamaz !");
+            return;
+          } else if (!password) {
+            showError("Şifre boş bırakılamaz !");
+            return;
+          } else if (!passwordRepeat) {
+            showError("Şifre tekrarı boş bırakılamaz !");
+            return;
           }
 
           // Validate Functions
@@ -265,7 +285,7 @@
 
           // Validate input fields
           if (!validate_email(email) || !validate_password(password)) {
-            showError("Hatalı e-posta veya şifre tercihi");
+            showError("Hatalı e-posta veya şifre tercihi...");
             return;
             // Don't continue running the code
           }
@@ -277,7 +297,7 @@
                 userName: userName,
                 email: email,
               });
-              showPopup("Kayıt Başarılı!");
+              showPopup("Kayıt Başarılı !");
               setTimeout(() => {
                 window.location.href = "index.html";
               }, 1000);
