@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="css/style-login.css" />
     <title>Register Panel</title>
     <link rel="icon" href="img/shops.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
   </head>
   <body>
     <section class="gradient-custom">
@@ -28,7 +34,7 @@
                   <form id="registerForm" method="post">
                     <div class="form-outline form-white mb-4">
                       <label for="userName" style="margin-bottom: 10px"
-                        ><b>Kullanıcı Adı:</b></label
+                        ><b>* Kullanıcı Adı:</b></label
                       >
                       <input
                         type="text"
@@ -42,7 +48,7 @@
 
                     <div class="form-outline form-white mb-4">
                       <label for="email" style="margin-bottom: 10px"
-                        ><b>E-posta:</b></label
+                        ><b>* E-posta:</b></label
                       >
                       <input
                         type="email"
@@ -56,7 +62,7 @@
 
                     <div class="form-outline form-white mb-4">
                       <label for="password" style="margin-bottom: 10px"
-                        ><b>Şifre:</b></label
+                        ><b>* Şifre:</b></label
                       >
                       <input
                         type="password"
@@ -70,7 +76,7 @@
 
                     <div class="form-outline form-white mb-4">
                       <label for="passwordRepeat" style="margin-bottom: 10px"
-                        ><b>Şifre (Tekrar):</b></label
+                        ><b>* Şifre (Tekrar):</b></label
                       >
                       <input
                         type="password"
@@ -183,6 +189,48 @@
         measurementId: "G-9SK5M4J4VD",
       };
 
+      function showPopup(message) {
+        toastr.options = {
+          closeButton: true,
+          debug: false,
+          newestOnTop: false,
+          progressBar: true,
+          positionClass: "toast-top-right",
+          preventDuplicates: true,
+          onclick: null,
+          showDuration: "300",
+          hideDuration: "1000",
+          timeOut: "1000",
+          extendedTimeOut: "1000",
+          showEasing: "swing",
+          hideEasing: "linear",
+          showMethod: "fadeIn",
+          hideMethod: "fadeOut",
+        };
+        toastr.success(message);
+      }
+
+      function showError(message) {
+        toastr.options = {
+          closeButton: true,
+          debug: false,
+          newestOnTop: false,
+          progressBar: true,
+          positionClass: "toast-top-right",
+          preventDuplicates: true,
+          onclick: null,
+          showDuration: "300",
+          hideDuration: "1000",
+          timeOut: "1500",
+          extendedTimeOut: "1000",
+          showEasing: "swing",
+          hideEasing: "linear",
+          showMethod: "fadeIn",
+          hideMethod: "fadeOut",
+        };
+        toastr.error(message);
+      }
+
       const app = initializeApp(firebaseConfig);
       const auth = getAuth(app);
       const db = getDatabase(app);
@@ -197,9 +245,11 @@
           const passwordRepeat =
             document.getElementById("passwordRepeat").value;
 
-          if (password !== passwordRepeat) {
-            alert("İki şifre eşleşmiyor. Tekrar deneyiniz!");
-            return;
+          if (passwordRepeat && password) {
+            if (password !== passwordRepeat) {
+              showError("İki şifre eşleşmiyor. Tekrar deneyiniz!");
+              return;
+            }
           }
 
           // Validate Functions
@@ -209,13 +259,13 @@
           }
 
           function validate_password(password) {
-            // Firebase only accepts leghts greater than 6
+            // Firebase only accepts lengths greater than 6
             return password.length >= 6;
           }
 
           // Validate input fields
           if (!validate_email(email) || !validate_password(password)) {
-            alert("Hatalı e-posta veya şifre tercihi");
+            showError("Hatalı e-posta veya şifre tercihi");
             return;
             // Don't continue running the code
           }
@@ -227,13 +277,15 @@
                 userName: userName,
                 email: email,
               });
-              alert("Register Successful!");
-              window.location.href = "index.html";
+              showPopup("Kayıt Başarılı!");
+              setTimeout(() => {
+                window.location.href = "index.html";
+              }, 1000);
             })
             .catch((error) => {
               const errorCode = error.code;
               const errorMessage = error.message;
-              alert(`Error: ${errorMessage}`);
+              showError(`Error: ${errorMessage}`);
             });
         });
 
@@ -251,7 +303,6 @@
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
-    <script src="http://codepen.io/assets/libs/fullpage/jquery.js"></script>
     <script src="js/script-dark-and-light-theme.js"></script>
   </body>
 </html>

@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="css/style-login.css" />
     <title>Login Panel</title>
     <link rel="icon" href="img/shops.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
   </head>
   <body>
     <section class="gradient-custom">
@@ -167,6 +173,48 @@
       const app = initializeApp(firebaseConfig);
       const auth = getAuth(app);
 
+      function showPopup(message) {
+        toastr.options = {
+          closeButton: true,
+          debug: false,
+          newestOnTop: false,
+          progressBar: true,
+          positionClass: "toast-top-right",
+          preventDuplicates: true,
+          onclick: null,
+          showDuration: "300",
+          hideDuration: "1000",
+          timeOut: "800",
+          extendedTimeOut: "1000",
+          showEasing: "swing",
+          hideEasing: "linear",
+          showMethod: "fadeIn",
+          hideMethod: "fadeOut",
+        };
+        toastr.success(message);
+      }
+
+      function showError(message) {
+        toastr.options = {
+          closeButton: true,
+          debug: false,
+          newestOnTop: false,
+          progressBar: true,
+          positionClass: "toast-top-right",
+          preventDuplicates: true,
+          onclick: null,
+          showDuration: "300",
+          hideDuration: "1000",
+          timeOut: "1500",
+          extendedTimeOut: "1000",
+          showEasing: "swing",
+          hideEasing: "linear",
+          showMethod: "fadeIn",
+          hideMethod: "fadeOut",
+        };
+        toastr.error(message);
+      }
+
       document
         .getElementById("loginButton")
         .addEventListener("click", function (e) {
@@ -174,10 +222,24 @@
           const email = document.getElementById("email").value;
           const password = document.getElementById("password").value;
 
+          if (!email && !password) {
+            showError("Email ve şifre boş bırakılamaz");
+            return;
+          } else if (!email) {
+            showError("Email boş bırakılamaz");
+            return;
+          } else if (!password) {
+            showError("Şifre boş bırakılamaz");
+            return;
+          }
+
           signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
               const user = userCredential.user;
-              window.location.href = "./home-page.html";
+              showPopup("Giriş başarılı!");
+              setTimeout(function () {
+                window.location.href = "./home-page.html";
+              }, 800);
             })
             .catch((error) => {
               const errorCode = error.code;
@@ -185,11 +247,11 @@
                 errorCode === "auth/wrong-password" ||
                 errorCode === "auth/invalid-login-credentials"
               ) {
-                alert("Şifre eksik veya hatalı");
+                showError("Şifre eksik veya hatalı");
               } else if (errorCode === "auth/user-not-found") {
-                alert("Kullanıcı bulunamadı");
+                showError("Kullanıcı bulunamadı");
               } else {
-                alert(`Error: ${error.message}`);
+                showError(`Tekrar Deneyiniz!`);
               }
             });
         });
